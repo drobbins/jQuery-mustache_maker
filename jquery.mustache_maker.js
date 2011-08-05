@@ -5,7 +5,7 @@
 		var opts = $.extend({}, $.fn.mustache_maker.defaults, options);
 		
 		var attach_canvas = function($img){
-			$(window).load(function(){
+			$img.load(function(){
 				var clickX = new Array();
 				var clickY = new Array();
 				var clickDrag = new Array();
@@ -74,7 +74,7 @@
 				canvas.position($img.position());
 				canvas.data('original', $img);
 				$img.detach();
-				context.drawImage($img[0],1, 1, 310, 260);
+				context.drawImage($img[0],0, 0, width, height);
 			});
 		}
 		

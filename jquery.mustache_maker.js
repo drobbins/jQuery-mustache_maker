@@ -12,13 +12,6 @@
 				var paint;
 				var height = $img.height();
 				var width = $img.width();
-				/*var pic_real_width, pic_real_height;
-				$("<img/>") // Make in memory copy of image to avoid css issues
-				    .attr("src", $img.attr("src"))
-				    .load(function() {
-				        pic_real_width = this.width;   // Note: $(this).width() will not
-				        pic_real_height = this.height; // work for in memory images.
-				    });*/
 				var canvas = $("<canvas/>");
 				canvas.attr("height", height);
 				canvas.attr("width", width);

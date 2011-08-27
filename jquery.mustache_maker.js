@@ -28,36 +28,36 @@
             paint = true;
             addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
             $.fn.mustache_maker.draw({
-							x : clickX,
-							y : clickY,
-							drag : clickDrag
-						}, context, canvas);
+              x : clickX,
+              y : clickY,
+              drag : clickDrag
+            }, context, canvas);
         });
         canvas.mousemove(function(e){
           if(paint){
             addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true);
             $.fn.mustache_maker.draw({
-							x : clickX,
-							y : clickY,
-							drag : clickDrag
-						}, context, canvas);
+              x : clickX,
+              y : clickY,
+              drag : clickDrag
+            }, context, canvas);
           }
         });
         canvas.mouseup(function(e){
           paint = false;
-					opts.mustache_callback({
-						x : clickX,
-						y : clickY,
-						drag : clickDrag
-					});
+          opts.mustache_callback({
+            x : clickX,
+            y : clickY,
+            drag : clickDrag
+          });
         });
         canvas.mouseleave(function(e){
           paint = false;
-					opts.mustache_callback({
-						x : clickX,
-						y : clickY,
-						drag : clickDrag
-					});
+          opts.mustache_callback({
+            x : clickX,
+            y : clickY,
+            drag : clickDrag
+          });
         });
         
         //Store the original image on the canvas and replace it with the canvas version.
@@ -83,9 +83,9 @@
     context.lineJoin = "round";
     context.lineWidth = 5;
 
-		var clickX = mustache.x,
-				clickY = mustache.y,
-				clickDrag = mustache.drag;
+    var clickX = mustache.x,
+        clickY = mustache.y,
+        clickDrag = mustache.drag;
 
     for(var i=0; i < clickX.length; i++)
     {   
